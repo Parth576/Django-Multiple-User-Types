@@ -1,0 +1,18 @@
+{% extends "gradesApp/base.html" %}
+{% block body_block %}
+
+<div class="jumbotron">
+    {% if invalidlogin %}
+        <h3>Please enter correct login details!</h3>
+    {% endif %}
+    <form action="{% url 'gradesApp:userLogin' %}" method="POST">
+        {% csrf_token %}
+        <label for="username">Username: </label>
+        <input type="text" name="username" placeholder="Enter Username">
+        <label for="password">Password: </label>
+        <input type="password" name="password" placeholder="Enter Password">
+        <input type="Submit" value="Login">
+    </form>
+</div>
+
+{% endblock %}

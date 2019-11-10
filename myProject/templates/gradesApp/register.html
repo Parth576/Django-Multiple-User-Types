@@ -1,0 +1,14 @@
+{% extends 'gradesApp/base.html' %}
+{% block body_block %}
+
+<div class="jumbotron">
+    <h1 class="display-3">Register Here!</h1>
+   
+    <hr class="my-2">
+    <p class="lead">
+        <a class="btn btn-primary btn-lg" href="{% url "gradesApp:registerStudent" %}" role="button">I'm a Student</a>
+        <a class="btn btn-primary btn-lg" href="{% url "gradesApp:registerTeacher" %}" role="button">I'm a Teacher</a>
+    </p>
+</div>
+
+{% endblock %}
